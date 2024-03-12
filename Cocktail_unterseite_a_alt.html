@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+	</script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="cocktail.css">
+	<title>Cocktail Crashcourse</title>
+</head>
+
+<body>
+
+<section>
+	<div class="container aufmacher">
+		<h2 class="unterseiteH2">Caipirinha aus Brasilien</h2>
+		<div class="row justify-content-center">
+			<div class="col-sm-4">
+				<img class= "normal onscroll" src="images/caipirinha-cocktail-1160px.jpg">
+			</div>
+			<div class="col-sm-6">
+				<div  id="zutatenBox">
+					<h3 id="zutatenh3">Zutaten</h3>
+				<ul class="zutaten">
+					<li>
+						Cachaca (6 cl)
+					</li>
+					<li>
+						Limette (1 Stück)
+					</li>
+					<li>
+						Rohrzucker (2-3 TL)
+					</li>
+					<li>
+						Crushed Ice
+					</li>
+				</ul>
+				</div>
+				
+				<h3> Zubereitung </h3> 
+				<p id="blocksatzAufmacher">
+					Zunächst die Limette in 8 Stücke schneiden. Die Achtel in einen Tumbler geben, den Rohrzucker hinzufügen und den Limettensaft mithilfe eines Stößels ausdrücken. Anschließend das Glas mit cruched ice auffüllen und den Cachaca zugeben. Alles gut umrühren und den Caipirinha mit einem Strohhalm servieren.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section class="hintergrund">
+		<div class="container">
+			<h2>Hintergrund</h2>
+			<p id="blocksatz">Der klassische Caipirinha, oft auch als Caipirinha de Pinga bezeichnet, besteht aus einer speziellen Mischung aus Cachaça, Limettensaft, Zucker und Eis. Er ist ein Paradebeispiel für die Kategorie der Sours und bietet eine perfekte Balance zwischen Süße und Säure. Aber die Vielfalt endet hier nicht. Alternativ gibt es auch Versionen mit Wodka, bekannt als Caipirinha de Vodka oder Caipiroska, oder mit Rotwein, hauptsächlich in Südbrasilien als Caipirinha de Vinho serviert. Ursprünglich stammt die Caipirinha vom Cocktail Batida de Limão, dem klassischen Sour ohne Fruchtfleisch. </br>Der Name "Caipirinha" ist dabei eine liebevolle Verkleinerungsform des brasilianischen Wortes "Caipira", was so viel wie "Landei" bedeutet. Trotz dieses bescheiden klingenden Namens war die Caipirinha ursprünglich ein Favorit der ländlichen Oberschicht Brasiliens.</br>Nach dem Ersten Weltkrieg eroberte sie die Herzen der Großstadtbewohner, während auf dem Land weiterhin der reine Zuckerrohrschnaps genossen wurde. So wird aus einem einfachen "Landei" ein international gefeierter Cocktail, der die lebendige Kultur und das sonnige Temperament Brasiliens in einem Glas einfängt.</p>
+		</div>
+	</section>
+
+
+<section class="videos">
+	<h2>Zubereitungsvideo für den Caipirinha</h2>
+	<iframe width="896" height="504" src="https://www.youtube.com/embed/lJuSrPsFeP4?si=uDl-E_0gzrY5RzLj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</section>
+
+	<section id="Welcome">
+		<h2>
+			Mehr dazu
+		</h2> 			
+						<div class="gallery-wrap">
+							<img id="arrowLeft" src="images/arrow_left.jpg">
+							<div class="gallery">
+								<div>
+									<span >
+										<a href="Cocktail_unterseite_a">
+											<img src="images/audiovisualmedia.jpg">
+											<p>
+												Placeholder
+											</p>
+										</a>
+									</span>
+									<span>
+										<img src="images/hdm.jpg">
+									</span>
+									<span>
+										<img src="images/hdm_building.jpg">
+									</span>
+									<span>
+										<img src="images/mobilemedia.jpg">
+									</span>
+								</div>
+								<div>
+									<span>
+										<img src="images/audiovisualmedia.jpg">
+									</span>
+									<span>
+										<img src="images/hdm.jpg">
+									</span>
+									<span>
+										<img src="images/hdm_building.jpg">
+									</span>
+									<span>
+										<img src="images/mobilemedia.jpg">
+									</span>
+								</div>
+							</div>
+							<img id="arrowRight"src="images/arrow_right.png">
+						</div>				
+	</section>	
+
+<script defer>
+	let scrollContainer= document.querySelector (".gallery")
+	let arrowLeft = document.getElementById("arrowLeft")
+	let arrowRight = document.getElementById("arrowRight")
+
+	scrollContainer.addEventListener ("wheel", (evt) => {
+		evt.preventDefault ();
+		scrollContainer.scrollLeft +=evt.deltaY;
+	});
+
+	arrowLeft.addEventListener ("click", () => {
+		scrollContainer.style.scrollBehavior = "smooth";
+		scrollContainer.scrollLeft -= 900;
+	});
+
+	arrowRight.addEventListener ("click", () => {
+		scrollContainer.style.scrollBehavior = "smooth";
+		scrollContainer.scrollLeft += 900;
+	});
+</script>
+
+<script defer>
+var images = document.getElementsByClassName('normal');
+var changeFrom = 150; // from which amount of scroll do you want the effect to appear ?
+
+window.addEventListener('scroll', function() {
+  if (window.scrollY >= changeFrom ) {
+    [].forEach.call(images, function(image) {
+      image.classList.add('onscroll');
+    });
+  }
+  else {
+    [].forEach.call(images, function(image) {
+      image.classList.remove('onscroll');
+    });
+  }
+});
+</script>
+
+<footer>
+	<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-sm">
+					<p></p>
+				</div>
+
+				<div class="col-sm">
+					<p></p>
+				</div>
+
+				<div class="col-sm">
+					<p>Kontakt</p>
+				</div>
+
+				<div class="col-sm">
+					<p>Impressum</p>
+				</div>
+
+				<div class="col-sm">
+					<a id="linkFooter" href="http://instagram.com/ananaskat.art/"><p >Instagram</p> </a>
+				</div>
+
+				<div class="col-sm">
+					<p></p>
+				</div>
+
+				<div class="col-sm">
+					<p></p>
+				</div>
+			</div>
+		</div>
+</footer>
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" aria-current="page" href="#">Coktail Crashcourse</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link"  href="#Welcome">Welcome</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Cocktails">Cocktails</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="Cocktail_unterseite_a.html">Random Cocktail</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+</body>
+</html>

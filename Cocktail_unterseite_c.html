@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+	</script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="cocktail.css">
+	<link rel="icon" href="images/path2.png" type="image/icon type">
+	<title>Cocktail Crashcourse</title>
+</head>
+
+<body >
+
+	<h1 id="h1C">Shop</h1>
+
+<aside class="small-container">
+	<div class="filter-container">
+		<div id="search-container">
+			    <label for="search-input">Search:</label>
+			    <input type="text" id="search-input" placeholder="Enter keywords">
+			    <button class="btn btn-outline-success" type="submit"> <img src="images/magnifying-glass-3-16_black.png"> </button>
+			  </div>
+			  <div id="filter-options">
+			    <label for="categoryDropdown">Select Category:</label>
+			    <select id="categoryDropdown" onchange="filterImages()">
+			      <option value="all">All</option>
+			      <option value="accessories">Accessories</option>
+			      <option value="glasses">Glasses</option>
+			      <option value="cocktails">Ready-made Cocktails</option>
+			    </select>
+			  </div>
+			<div id="price-range-container">
+				<label for="min-price">Min Preis:</label>
+				<input type="range" id="min-price" min="5" max="2995" step="5" value="5">
+				<span id="min-price-value">5€</span><br>
+
+				<label for="max-price">Max Preis:</label>
+				<input type="range" id="max-price" min="5" max="3000" step="5" value="3000">
+				<span id="max-price-value">3000€</span>
+			</div>
+		</div>	
+</aside>	
+
+	<section  class="shop-gallery">	
+		<div>
+			<div class="container">
+			  <div class="row">
+			    <!-- Linke Spalte für das größere Bild -->
+			    <div class="col-md-8 ">
+			      <img class="largeImg img-fluid" src="images/Mockup/drink-can-caipi.png" alt="Ready Mades Shop">
+			      <div class="img-text">Ready-Mades</div>
+			    </div>
+			    <div class="col-md-4">
+			     <div class="img-container">
+			        <img class="smallImg img-fluid" src="images/longdrink_glas.jpeg" alt="Glasses Shop">
+			        <div class="img-text">Glasses</div>
+			      </div>
+			      <div class="img-container">
+			        <img class="smallImg img-fluid" src="images/shaker.jpg" alt="Accessories shop">
+			        <div class="img-text">Accessories</div>  
+			    </div>
+			  </div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section id="shop1">
+		<h2 data-category="accessories">Accessories</h2>
+		<div class="image-grid">
+		  <div class="image-item" data-category="accessories">
+		    <img src="images/barsieb.jpg" alt="barsieb">
+		    <p>strainer</p>
+		  </div>
+		  <div class="image-item" data-category="accessories">
+		    <img src="images/Mixglas.jpg" alt="Mixglas">
+		    <p>mixing glass</p>
+		  </div>
+		  <div class="image-item" data-category="accessories">
+		    <img src="images/muddler.jpg" alt="muddler">
+		    <p>muddler</p>
+		  </div>
+		  <div class="image-item" data-category="accessories">
+		    <img src="images/shaker.jpg" alt="Shaker">
+		    <p>shaker</p>
+		  </div>
+		</div>
+	</section>	
+
+	<section id="shop1">
+		<h2 data-category="glasses">Glasses</h2>
+		<div class="image-grid">
+		  <div class="image-item" data-category="glasses">
+		    <img src="images/Lucent-Plastic-Vintage-Martini-8.3oz-23.5cl.jpg" alt="martini glas">
+		    <p>martini glasses</p>
+		  </div>
+		  <div class="image-item" data-category="glasses">
+		    <img src="images/longdrink_glas.jpeg" alt="longdrink glas">
+		    <p>longdrink glasses</p>
+		  </div>
+		  <div class="image-item" data-category="glasses">
+		    <img src="images/whsikey_glas.jpeg" alt="whiskey glas">
+		    <p>whiskey glasses</p>
+		  </div>
+		  <div class="image-item" data-category="glasses">
+		    <img src="images/lucent_sommelier_wine_glass_3_2.png" alt="wine glas">
+		    <p>wine glasses</p>
+		  </div>
+		</div>
+	</section>	
+
+	<section id="shop1">
+		<h2 data-category="cocktails">ready-made cocktails</h2>
+		<div class="image-grid">
+		  <div class="image-item" data-category="cocktails">
+		    <img src="images/Mockup/drink-can-caipi.png" alt="ready made Caipirinha">
+		    <p>Caipirinha</p>
+		  </div>
+		  <div class="image-item" data-category="cocktails">
+		    <img src="images/Mockup/drink-can-french75.png" alt="french 75">
+		    <p>Frecnch 75</p>
+		  </div>
+		  <div class="image-item" data-category="cocktails">
+		    <img src="images/Mockup/drink-can-negroni.png" alt="ready made negroni">
+		    <p>Negroni</p>
+		  </div>
+		  <div class="image-item" data-category="cocktails">
+		    <img src="images/Mockup/drink-can-martini.png" alt="ready made martini">
+		    <p>Martini</p>
+		  </div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-sm">
+						<p></p>
+					</div>
+
+					<div class="col-sm">
+						<p></p>
+					</div>
+
+					<div class="col-sm">
+						<p>Contact</p>
+					</div>
+
+					<div class="col-sm">
+						<p>Imprint</p>
+					</div>
+
+					<div class="col-sm">
+						<a id="linkFooter" href="http://instagram.com/ananaskat.art/"><p >Instagram</p> </a>
+					</div>
+
+					<div class="col-sm">
+						<p></p>
+					</div>
+
+					<div class="col-sm">
+						<p></p>
+					</div>
+				</div>
+			</div>
+	</footer>
+
+	<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+	  <div class="container-fluid">
+	    <a class="navbar-brand" aria-current="page" href="Cocktail.html">Cocktail Crashcourse</a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+	        <li class="nav-item">
+	          <a class="nav-link"  href="#Welcome">About us</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="Cocktail_unterseite_c.html">Shop</a>
+	        </li>
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	            Dropdown
+	          </a>
+	          <ul class="dropdown-menu">
+	            <li><a class="dropdown-item" href="Cocktail_unterseite_a.html">Random Cocktail</a></li>
+	            <li><a class="dropdown-item" href="Cocktail_unterseite_b.html">Mixology introduction</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+	      <form class="d-flex" role="search">
+	        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+	        <button class="btn btn-outline-success" type="submit" > <img src="images/magnifying-glass-3-16.png"> </button>
+	      </form>
+	    </div>
+	  </div>
+	</nav>
+
+
+<script defer type="text/javascript">
+document.getElementById('min-price').addEventListener('input', updatePrice);
+  document.getElementById('max-price').addEventListener('input', updatePrice);
+
+  function updatePrice() {
+    var minPrice = document.getElementById('min-price').value;
+    var maxPrice = document.getElementById('max-price').value;
+
+    document.getElementById('min-price-value').textContent = minPrice + '€';
+    document.getElementById('max-price-value').textContent = maxPrice + '€';
+  }
+</script>
+
+<script defer	>
+  function filterImages() {
+    var categoryDropdown = document.getElementById('categoryDropdown');
+    var selectedCategory = categoryDropdown.value;
+    var imageItems = document.querySelectorAll('.image-item');
+    
+    imageItems.forEach(function(item) {
+      var itemCategory = item.getAttribute('data-category');
+      if (selectedCategory === 'all' || itemCategory === selectedCategory) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+
+
+
+</body>
